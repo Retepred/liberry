@@ -19,7 +19,7 @@ while response != 0
   when 2
     #TODO "2. Create Person"
   when 3
-    #TODO "3. List all Books"
+    list_books(liberry)
   when 4
     #TODO "4. List all People"
   when 5
@@ -35,7 +35,7 @@ while response != 0
   puts "press enter to continue"
   gets
   response = menu
-  
+
 end
 
 

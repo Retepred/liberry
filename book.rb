@@ -7,5 +7,7 @@ attr_reader :title, :genre
     @genre=options[:genre]
   end
 
-
+  def pretty_string
+    "#{title} #{genre}"
+  end
 end
