@@ -10,6 +10,18 @@ require_relative 'methods'
 
 liberry=Liberry.new name: "Peter's Liberry of Adult Books"
 
+
+liberry.add_person Person.new name:'nevster'
+liberry.add_person Person.new name: 'michael'
+liberry.add_person Person.new name: 'graeme'
+liberry.add_person Person.new name: 'neil'
+liberry.add_book Book.new title: "neil's naughty nibbles", genre: "nistorical"
+liberry.add_book Book.new title: "graeme's gangreene", genre: "norror"
+liberry.add_book Book.new title: "nevin's knob", genre: "science fiction"
+liberry.add_book Book.new title: "to kill a mockingbird", genre: "fiction"
+liberry.add_book Book.new title: "michaels misery", genre: "teen"
+
+
 response = menu
 
 while response != 0
@@ -17,17 +29,17 @@ while response != 0
   when 1  
     create_book(liberry)
   when 2
-    #TODO "2. Create Person"
+    create_person(liberry)
   when 3
     list_books(liberry)
   when 4
-    #TODO "4. List all People"
+    list_people(liberry)
   when 5
-    #TODO "5. Lend Book"
+    borrow_book(liberry)
   when 6
-    #TODO "6. Return Book"
+    return_book(liberry)
   when 7
-    #TODO "7. List borrowed Books"
+    list_borrow_books(liberry)
   else
     puts "invalid option"
   end

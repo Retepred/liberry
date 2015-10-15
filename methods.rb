@@ -46,3 +46,44 @@ end
 def list_books(liberry)
   puts liberry.list_books
 end
+
+def list_borrow_books(liberry)
+  puts liberry.list_borrowed_books
+end
+
+def list_people(liberry)
+  puts liberry.list_people
+end
+
+def create_person(liberry)
+  print "what is the name of the person? "
+  name = gets.chomp
+  person = Person.new(name: name)
+  liberry.add_person(person)
+end
+
+def borrow_book(liberry)
+  puts liberry.list_books
+  puts
+  print "which book would you like to steal? "
+  book_title = gets.chomp
+  print "Which tool of a fook is trying to steal a book?: "
+  person_name = gets.chomp
+
+  liberry.borrow(person_name, book_title)
+end
+
+def return_book(liberry)
+puts
+print "Which idiot is trying to return a stolen book?: "
+person_name = gets.chomp
+person = liberry.people[person_name]
+puts
+
+puts person.list_books
+puts
+print "Which book is being returned?: "
+book_title = gets.chomp
+
+liberry.return(person_name, book_title)
+end
