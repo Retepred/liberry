@@ -1,13 +1,13 @@
 @title = ">>>>>>>>>>>>Welcome to Peter's Liberry of Adult Books<<<<<<<<<<"
 @title_picture = "( ͡° ͜ʖ ͡°)"
 @title_picture_bookshelf = "
-                .-~~~~~~~~~-._       _.-~~~~~~~~~-.
-            __.'              ~.   .~              `.__
-          .'//                  \./                  \\`.
-        .'//                     |                     \\`.
-      .'// .-~'''''''~~~~-._     |     _,-~~~~'''''''~-. \\`. 
-    .'//.-'                 `-.  |  .-'                 '-.\\`.
-  .'//______.============-..   \ | /   ..-============.______\\`.
+.-~~~~~~~~~-._       _.-~~~~~~~~~-.
+__.'              ~.   .~              `.__
+.'//                  \./                  \\`.
+.'//                     |                     \\`.
+.'// .-~'''''''~~~~-._     |     _,-~~~~'''''''~-. \\`. 
+.'//.-'                 `-.  |  .-'                 '-.\\`.
+.'//______.============-..   \ | /   ..-============.______\\`.
 .'______________________________\|/______________________________`.
 "
 
@@ -74,16 +74,16 @@ def borrow_book(liberry)
 end
 
 def return_book(liberry)
-puts
-print "Which idiot is trying to return a stolen book?: "
-person_name = gets.chomp
-person = liberry.people[person_name]
-puts
+  puts
+  print "Which idiot is trying to return a stolen book?: "
+  person_name = gets.chomp
+  person = liberry.people[person_name]
+  puts
 
-puts person.list_books
-puts
-print "Which book is being returned?: "
-book_title = gets.chomp
+  puts person.list_books
+  puts
+  print "Which book is being returned?: "
+  book_title = gets.chomp
 
-liberry.return(person_name, book_title)
+  liberry.return(person_name, book_title)
 end

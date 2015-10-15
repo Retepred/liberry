@@ -35,7 +35,7 @@ class Liberry
         book.pretty_string
       end
       book_titles.join("\n")
-  end
+    end
   end
 
   def list_borrowed_books
@@ -47,7 +47,7 @@ class Liberry
         book.pretty_string
       end
       book_titles.join("\n")
-  end
+    end
   end
 
   def list_people
